@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+
 function PokemonCard(props) {
   const { pokemon }  = props;
 console.log( props)
@@ -35,4 +36,4 @@ PokemonCard.propTypes = {
 //   },
 // ];
 
-export default PokemonCard;
+  export default PokemonCard;
