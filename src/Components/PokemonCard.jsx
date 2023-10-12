@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function PokemonCard(props) {
   const { pokemon }  = props;
-
+console.log( props)
   return (
     <figure>
       {pokemon.imgSrc ? (
@@ -16,6 +17,12 @@ function PokemonCard(props) {
   
 }
 
+PokemonCard.propTypes = {
+  pokemon: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    imgSrc: PropTypes.string,
+  }).isRequired,
+};
     
 // const pokemonList = [
 //   {
