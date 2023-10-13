@@ -17,9 +17,13 @@ function App() {
     }
   };
 
+  const onPokemonClick = (index) => {
+    setPokemonIndex(index);
+  };
+  
   const pokemonList = [
     {
-      name: "bulbasaur",
+      name: "bulbasaur",  
       imgSrc:
         "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
     },
@@ -41,11 +45,20 @@ function App() {
     {
       name: "mew",
     },
+  
+  
+  
   ];
+ 
 
   return (
     <div>
-      <NavBar onPrecClick={precClick} onSuivClick={suivClick} />
+      <NavBar
+        onPrecClick={precClick}
+        onSuivClick={suivClick}
+        pokemonList={pokemonList}
+        onPokemonClick={onPokemonClick}
+      />
       <PokemonCard pokemon={pokemonList[pokemonIndex]} />
     </div>
   );
